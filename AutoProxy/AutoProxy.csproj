@@ -62,6 +62,9 @@
     </ApplicationDefinition>
     <Compile Include="Config\AutoProxyConfig.cs" />
     <Compile Include="Config\ProxySetting.cs" />
+    <Compile Include="Services\NetworkService.cs" />
+    <Compile Include="Services\NotificationService.cs" />
+    <Compile Include="Services\ProxySettingService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
