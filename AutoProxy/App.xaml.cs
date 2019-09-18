@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using AutoProxy.Components;
+using AutoProxy.Handlers;
 
 namespace AutoProxy
 {
@@ -20,6 +21,8 @@ namespace AutoProxy
         {
             base.OnStartup(e);
             this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+            NetworkHandler.Instance.Init();
+            AutoProxyHelper.CheckAndSetProxy();
         }
 
         protected override void OnExit(ExitEventArgs e)
