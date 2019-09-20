@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Text;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using AutoProxy.Config;
 
 namespace AutoProxy.Services

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Net.NetworkInformation;
-using AutoProxy.Services;
-using AutoProxy.Config;
+﻿using System.Net.NetworkInformation;
 
 
 namespace AutoProxy.Handlers
@@ -22,9 +15,7 @@ namespace AutoProxy.Handlers
 
         public void Init()
         {
-            NetworkChange.NetworkAvailabilityChanged +=
-                new NetworkAvailabilityChangedEventHandler(
-                    OnNetworkAvailabilityChanged);
+            NetworkChange.NetworkAvailabilityChanged += OnNetworkAvailabilityChanged;
         }
 
         private void OnNetworkAvailabilityChanged(object sender, NetworkAvailabilityEventArgs args)

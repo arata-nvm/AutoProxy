@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using AutoProxy.Components;
 using AutoProxy.Handlers;
 using AutoProxy.Config;
@@ -17,7 +11,7 @@ namespace AutoProxy
     /// </summary>
     public partial class App : Application
     {
-        private NotifyIcon notifyIcon = new NotifyIcon();
+        private readonly NotifyIcon notifyIcon = new NotifyIcon();
 
         protected override void OnStartup(StartupEventArgs e)
         {

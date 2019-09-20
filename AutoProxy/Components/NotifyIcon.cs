@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows;
 
 namespace AutoProxy.Components
@@ -14,7 +8,7 @@ namespace AutoProxy.Components
         public NotifyIcon()
         {
             InitializeComponent();
-            menuItem_Exit.Click += delegate (object sender, EventArgs e)
+            menuItem_Exit.Click += delegate
             {
                 Application.Current.Shutdown();
             };
