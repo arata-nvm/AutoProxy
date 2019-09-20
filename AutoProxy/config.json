@@ -1,0 +1,9 @@
+﻿{
+  "proxies": [
+    {
+      "ssid": "",
+      "proxyHost": "",
+      "proxyPort":  0
+    }
+  ] 
+}

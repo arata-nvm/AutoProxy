@@ -15,7 +15,7 @@ namespace AutoProxy
         {
             var ssid = NetworkService.GetConnectingSSID();
             if (ssid == string.Empty) return;
-            var settings = AutoProxyConfig.Instance.FindSetting(ssid);
+            var settings = Configuration.Instance.FindSetting(ssid);
             if (settings.Count != 0)
             {
                 ProxySettingService.SetProxy(settings.First());
