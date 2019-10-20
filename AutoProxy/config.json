@@ -3,7 +3,7 @@
     {
       "ssid": "",
       "proxyHost": "",
-      "proxyPort":  0
+      "proxyPort":  ""
     }
   ] 
 }

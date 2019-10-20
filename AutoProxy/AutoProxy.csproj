@@ -69,7 +69,12 @@
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Config\ProxySetting.cs" />
     <Compile Include="Handlers\NetworkHandler.cs" />
+    <Compile Include="Integrations\GitIntegration.cs" />
+    <Compile Include="Integrations\IIntegration.cs" />
+    <Compile Include="Integrations\IntegrationManager.cs" />
+    <Compile Include="Integrations\ScoopIntegration.cs" />
     <Compile Include="Services\AutorunService.cs" />
+    <Compile Include="Services\CommandService.cs" />
     <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\ProxySettingService.cs" />

@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using AutoProxy.Services;
 using AutoProxy.Config;
-
+using AutoProxy.Integrations;
 
 namespace AutoProxy
 {
@@ -14,12 +14,15 @@ namespace AutoProxy
             var settings = Configuration.Instance.FindSetting(ssid);
             if (settings.Count != 0)
             {
-                ProxySettingService.SetProxy(settings.First());
+                var setting = settings.First();
+                ProxySettingService.SetProxy(setting);
+                IntegrationManager.INSTANCE.SetProxy(setting);
                 NotificationService.SendNotify("プロキシを適用しました。", $"SSID: {ssid}");
             }
             else
             {
                 ProxySettingService.UnsetProxy();
+                IntegrationManager.INSTANCE.UnsetProxy();
                 NotificationService.SendNotify("プロキシを解除しました。");
             }
         }

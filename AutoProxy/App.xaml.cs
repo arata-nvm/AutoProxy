@@ -5,6 +5,7 @@ using AutoProxy.Components;
 using AutoProxy.Handlers;
 using AutoProxy.Config;
 using AutoProxy.Services;
+using AutoProxy.Integrations;
 
 namespace AutoProxy
 {
@@ -21,6 +22,7 @@ namespace AutoProxy
             this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             NetworkHandler.Instance.Init();
             Configuration.Instance.LoadConfig(Configuration.GetDefaultConfigFilePath());
+            IntegrationManager.INSTANCE.Init();
             AutoProxyHelper.CheckAndSetProxy();
         }
 
@@ -28,6 +30,7 @@ namespace AutoProxy
         {
             base.OnExit(e);
             ProxySettingService.UnsetProxy();
+            IntegrationManager.INSTANCE.UnsetProxy();
             this.notifyIcon.Dispose();
         }
 
