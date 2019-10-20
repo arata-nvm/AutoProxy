@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
+using System.Reflection;
 using AutoProxy.Components;
 using AutoProxy.Handlers;
 using AutoProxy.Config;
@@ -18,7 +20,7 @@ namespace AutoProxy
             base.OnStartup(e);
             this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             NetworkHandler.Instance.Init();
-            Configuration.Instance.LoadConfig("config.json");
+            Configuration.Instance.LoadConfig(Configuration.GetDefaultConfigFilePath());
             AutoProxyHelper.CheckAndSetProxy();
         }
 

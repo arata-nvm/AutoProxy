@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using System.Text;
+using System.Reflection;
 using AutoProxy.Services;
 using Newtonsoft.Json;
 
@@ -11,32 +12,40 @@ namespace AutoProxy.Config
 
         private AutoProxyConfig _config = new AutoProxyConfig();
 
-        public static Configuration Instance { get; }= new Configuration();
+        public static Configuration Instance { get; } = new Configuration();
 
         private Configuration()
         {
 
         }
 
-        public void LoadConfig(string configFilePath)
+        public static string GetDefaultConfigFilePath()
         {
-            if (!File.Exists(configFilePath))
+            var currentFolderPath = Directory.GetParent(Assembly.GetExecutingAssembly().Location);
+            return Path.Combine(currentFolderPath.FullName, "config.json");
+        }
+
+        public void LoadConfig(string configFileFullPath)
+        {
+            if (!File.Exists(configFileFullPath))
             {
-                NotificationService.SendNotify("設定ファイルの読み込みに失敗しました。", $"File not found: {configFilePath}");
+                NotificationService.SendNotify("設定ファイルの読み込みに失敗しました。", $"File not found: {configFileFullPath}");
                 return;
             }
-            var json = File.ReadAllText(configFilePath, Encoding.UTF8);
+            var json = File.ReadAllText(configFileFullPath, Encoding.UTF8);
 
             try
             {
                 _config = JsonConvert.DeserializeObject<AutoProxyConfig>(json,
-                    new JsonSerializerSettings {DefaultValueHandling = DefaultValueHandling.Populate});
+                    new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Populate });
             }
             catch (JsonReaderException e)
             {
                 NotificationService.SendNotify("設定ファイルの読み込みに失敗しました。", e.Message);
+                return;
             }
 
+            NotificationService.SendNotify("設定ファイルを読み込みました。", _config.Proxies.Count.ToString());
         }
 
         public void SaveConfig(string configFilePath)
