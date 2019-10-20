@@ -23,5 +23,18 @@ namespace AutoProxy
                 NotificationService.SendNotify("プロキシを解除しました。");
             }
         }
+
+        public static void RegisterAutorun()
+        {
+            AutorunService.Register();
+            NotificationService.SendNotify("自動実行を設定しました。");
+        }
+
+        public static void UnregisterAutorun()
+        {
+            AutorunService.Register();
+            NotificationService.SendNotify("自動実行を解除しました。");
+        }
+
     }
 }

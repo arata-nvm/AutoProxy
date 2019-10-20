@@ -31,22 +31,38 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifyIcon));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuItem_Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setAutorunMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unsetAutorunMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1.SuspendLayout();
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuItem_Exit});
+            this.setAutorunMenuItem,
+            this.unsetAutorunMenuItem,
+            this.exitMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(94, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(161, 70);
             // 
-            // menuItem_Exit
+            // exitMenuItem
             // 
-            this.menuItem_Exit.Name = "menuItem_Exit";
-            this.menuItem_Exit.Size = new System.Drawing.Size(93, 22);
-            this.menuItem_Exit.Text = "Exit";
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitMenuItem.Text = "Exit";
+            // 
+            // setAutorunMenuItem
+            // 
+            this.setAutorunMenuItem.Name = "setAutorunMenuItem";
+            this.setAutorunMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.setAutorunMenuItem.Text = "AddAutorun";
+            // 
+            // unsetAutorunMenuItem
+            // 
+            this.unsetAutorunMenuItem.Name = "unsetAutorunMenuItem";
+            this.unsetAutorunMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.unsetAutorunMenuItem.Text = "RemoveAutorun";
             // 
             // notifyIcon1
             // 
@@ -62,6 +78,8 @@
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.ToolStripMenuItem menuItem_Exit;
+        private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem setAutorunMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unsetAutorunMenuItem;
     }
 }

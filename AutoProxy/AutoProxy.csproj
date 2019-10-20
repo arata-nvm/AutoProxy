@@ -69,6 +69,7 @@
     <Compile Include="Config\Configuration.cs" />
     <Compile Include="Config\ProxySetting.cs" />
     <Compile Include="Handlers\NetworkHandler.cs" />
+    <Compile Include="Services\AutorunService.cs" />
     <Compile Include="Services\NetworkService.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\ProxySettingService.cs" />

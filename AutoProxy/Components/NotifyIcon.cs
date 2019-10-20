@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Windows;
+using AutoProxy.Services;
 
 namespace AutoProxy.Components
 {
@@ -8,10 +9,9 @@ namespace AutoProxy.Components
         public NotifyIcon()
         {
             InitializeComponent();
-            menuItem_Exit.Click += delegate
-            {
-                Application.Current.Shutdown();
-            };
+            setAutorunMenuItem.Click += delegate {　AutoProxyHelper.RegisterAutorun(); };
+            unsetAutorunMenuItem.Click += delegate { AutoProxyHelper.UnregisterAutorun(); };
+            exitMenuItem.Click += delegate { Application.Current.Shutdown(); };
         }
 
         public NotifyIcon(IContainer container)
