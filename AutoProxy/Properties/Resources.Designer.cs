@@ -70,6 +70,15 @@ namespace AutoProxy.Properties {
         }
         
         /// <summary>
+        ///   終了 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ExitMenuItem {
+            get {
+                return ResourceManager.GetString("ExitMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   設定ファイルの読み込みに失敗しました。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string FailedToLoadConfig {
@@ -97,6 +106,24 @@ namespace AutoProxy.Properties {
         }
         
         /// <summary>
+        ///   設定再読み込み に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ReloadConfigMenuItem {
+            get {
+                return ResourceManager.GetString("ReloadConfigMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   自動実行登録 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SetAutorunMenuItem {
+            get {
+                return ResourceManager.GetString("SetAutorunMenuItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   プロキシを適用しました。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SetProxy {
@@ -111,6 +138,15 @@ namespace AutoProxy.Properties {
         public static string UnregisteredAutorun {
             get {
                 return ResourceManager.GetString("UnregisteredAutorun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   自動実行解除 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string UnsetAutorunMenuItem {
+            get {
+                return ResourceManager.GetString("UnsetAutorunMenuItem", resourceCulture);
             }
         }
         

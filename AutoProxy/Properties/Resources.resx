@@ -120,6 +120,9 @@
   <data name="CreatedConfigFile" xml:space="preserve">
     <value>設定ファイルを作成しました。</value>
   </data>
+  <data name="ExitMenuItem" xml:space="preserve">
+    <value>終了</value>
+  </data>
   <data name="FailedToLoadConfig" xml:space="preserve">
     <value>設定ファイルの読み込みに失敗しました。</value>
   </data>
@@ -129,11 +132,20 @@
   <data name="RegisteredAutorun" xml:space="preserve">
     <value>自動実行を設定しました。</value>
   </data>
+  <data name="ReloadConfigMenuItem" xml:space="preserve">
+    <value>設定再読み込み</value>
+  </data>
+  <data name="SetAutorunMenuItem" xml:space="preserve">
+    <value>自動実行登録</value>
+  </data>
   <data name="SetProxy" xml:space="preserve">
     <value>プロキシを適用しました。</value>
   </data>
   <data name="UnregisteredAutorun" xml:space="preserve">
     <value>自動実行を解除しました。</value>
+  </data>
+  <data name="UnsetAutorunMenuItem" xml:space="preserve">
+    <value>自動実行解除</value>
   </data>
   <data name="UnsetProxy" xml:space="preserve">
     <value>プロキシを解除しました。</value>

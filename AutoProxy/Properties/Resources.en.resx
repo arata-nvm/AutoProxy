@@ -120,6 +120,9 @@
   <data name="CreatedConfigFile" xml:space="preserve">
     <value>Created config file.</value>
   </data>
+  <data name="ExitMenuItem" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="FailedToLoadConfig" xml:space="preserve">
     <value>Failed to load config.</value>
   </data>
@@ -129,11 +132,20 @@
   <data name="RegisteredAutorun" xml:space="preserve">
     <value>Registered autorun</value>
   </data>
+  <data name="ReloadConfigMenuItem" xml:space="preserve">
+    <value>Reload Config</value>
+  </data>
+  <data name="SetAutorunMenuItem" xml:space="preserve">
+    <value>Set Autorun</value>
+  </data>
   <data name="SetProxy" xml:space="preserve">
     <value>Set proxy.</value>
   </data>
   <data name="UnregisteredAutorun" xml:space="preserve">
     <value>Unregistered autorun.</value>
+  </data>
+  <data name="UnsetAutorunMenuItem" xml:space="preserve">
+    <value>Unset Autorun</value>
   </data>
   <data name="UnsetProxy" xml:space="preserve">
     <value>Unset proxy.</value>
