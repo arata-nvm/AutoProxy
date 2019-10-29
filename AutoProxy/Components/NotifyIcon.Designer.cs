@@ -31,10 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifyIcon));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setAutorunMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unsetAutorunMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.reloadConfigMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -42,15 +43,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setAutorunMenuItem,
             this.unsetAutorunMenuItem,
+            this.reloadConfigMenuItem,
             this.exitMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(161, 70);
-            // 
-            // exitMenuItem
-            // 
-            this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.exitMenuItem.Text = "Exit";
             // 
             // setAutorunMenuItem
             // 
@@ -64,12 +60,24 @@
             this.unsetAutorunMenuItem.Size = new System.Drawing.Size(160, 22);
             this.unsetAutorunMenuItem.Text = "RemoveAutorun";
             // 
+            // exitMenuItem
+            // 
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.exitMenuItem.Text = "Exit";
+            // 
             // notifyIcon1
             // 
             this.notifyIcon1.ContextMenuStrip = this.contextMenuStrip1;
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
             this.notifyIcon1.Text = "AutoProxy";
             this.notifyIcon1.Visible = true;
+            // 
+            // reloadConfigMenuItem
+            // 
+            this.reloadConfigMenuItem.Name = "reloadConfigMenuItem";
+            this.reloadConfigMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.reloadConfigMenuItem.Text = "ReloadConfig";
             this.contextMenuStrip1.ResumeLayout(false);
 
         }
@@ -81,5 +89,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setAutorunMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unsetAutorunMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reloadConfigMenuItem;
     }
 }
