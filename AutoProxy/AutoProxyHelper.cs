@@ -2,6 +2,7 @@
 using AutoProxy.Services;
 using AutoProxy.Settings;
 using AutoProxy.Integrations;
+using AutoProxy.Properties;
 
 namespace AutoProxy
 {
@@ -17,26 +18,26 @@ namespace AutoProxy
                 var setting = settings.First();
                 ProxySettingService.SetProxy(setting);
                 IntegrationManager.INSTANCE.SetProxy(setting);
-                NotificationService.SendNotify("プロキシを適用しました。", $"SSID: {ssid}");
+                NotificationService.SendNotify(Resources.SetProxy, $"SSID: {ssid}");
             }
             else
             {
                 ProxySettingService.UnsetProxy();
                 IntegrationManager.INSTANCE.UnsetProxy();
-                NotificationService.SendNotify("プロキシを解除しました。");
+                NotificationService.SendNotify(Resources.UnsetProxy);
             }
         }
 
         public static void RegisterAutorun()
         {
             AutorunService.Register();
-            NotificationService.SendNotify("自動実行を設定しました。");
+            NotificationService.SendNotify(Resources.RegisteredAutorun);
         }
 
         public static void UnregisterAutorun()
         {
             AutorunService.Register();
-            NotificationService.SendNotify("自動実行を解除しました。");
+            NotificationService.SendNotify(Resources.UnregisteredAutorun);
         }
 
     }

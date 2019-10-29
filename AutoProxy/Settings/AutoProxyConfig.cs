@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using AutoProxy.Services;
 using Newtonsoft.Json;
 using AutoProxy.Models;
+using AutoProxy.Properties;
 
 namespace AutoProxy.Settings
 {
@@ -38,10 +39,11 @@ namespace AutoProxy.Settings
         {
             if (!File.Exists(configFilePath))
             {
-                NotificationService.SendNotify("設定ファイルを作成しました。", configFilePath);
+                NotificationService.SendNotify(Resources.CreatedConfigFile, configFilePath);
                 SaveConfig();
                 return;
             }
+
             var json = File.ReadAllText(configFilePath, Encoding.UTF8);
 
             try
@@ -53,11 +55,12 @@ namespace AutoProxy.Settings
             }
             catch (JsonReaderException e)
             {
-                NotificationService.SendNotify("設定ファイルの読み込みに失敗しました。", e.Message);
+                NotificationService.SendNotify(Resources.FailedToLoadConfig, e.Message);
                 return;
             }
 
-            NotificationService.SendNotify("設定ファイルを読み込みました。", Proxy.Proxies.Count.ToString());
+            ResourceService.Current.ChangeCulture(General.Language);
+            NotificationService.SendNotify(Resources.LoadedConfigFile, Proxy.Proxies.Count.ToString());
         }
 
         public void SaveConfig()
