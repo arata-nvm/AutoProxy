@@ -1,9 +1,9 @@
 ﻿using System.Runtime.Serialization;
 
-namespace AutoProxy.Config
+namespace AutoProxy.Models
 {
     [DataContract]
-    public class ProxySetting
+    public class ProxyInfo
     {
         [DataMember(Name = "ssid")]
         public string SSID { get; set; }

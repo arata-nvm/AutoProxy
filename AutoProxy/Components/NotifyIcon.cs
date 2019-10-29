@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows;
 using AutoProxy.Services;
-using AutoProxy.Config;
+using AutoProxy.Settings;
 
 namespace AutoProxy.Components
 {
@@ -13,7 +13,7 @@ namespace AutoProxy.Components
             setAutorunMenuItem.Click += delegate {　AutoProxyHelper.RegisterAutorun(); };
             unsetAutorunMenuItem.Click += delegate { AutoProxyHelper.UnregisterAutorun(); };
             reloadConfigMenuItem.Click += delegate { 
-                Configuration.Instance.LoadConfig(Configuration.GetDefaultConfigFilePath());
+                AutoProxyConfig.Current.LoadConfig();
                 AutoProxyHelper.CheckAndSetProxy();
             };
             exitMenuItem.Click += delegate { Application.Current.Shutdown(); };

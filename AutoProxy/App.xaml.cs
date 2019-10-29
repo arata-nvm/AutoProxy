@@ -3,7 +3,7 @@ using System.Windows;
 using System.Reflection;
 using AutoProxy.Components;
 using AutoProxy.Handlers;
-using AutoProxy.Config;
+using AutoProxy.Settings;
 using AutoProxy.Services;
 using AutoProxy.Integrations;
 
@@ -21,7 +21,7 @@ namespace AutoProxy
             base.OnStartup(e);
             this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
             NetworkHandler.Instance.Init();
-            Configuration.Instance.LoadConfig(Configuration.GetDefaultConfigFilePath());
+            AutoProxyConfig.Current.LoadConfig();
             IntegrationManager.INSTANCE.Init();
             AutoProxyHelper.CheckAndSetProxy();
         }

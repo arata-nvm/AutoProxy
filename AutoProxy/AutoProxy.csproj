@@ -65,9 +65,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AutoProxyHelper.cs" />
-    <Compile Include="Config\AutoProxyConfig.cs" />
-    <Compile Include="Config\Configuration.cs" />
-    <Compile Include="Config\ProxySetting.cs" />
+    <Compile Include="Settings\ProxySettings.cs" />
+    <Compile Include="Settings\AutoProxyConfig.cs" />
+    <Compile Include="Settings\GeneralSettings.cs" />
+    <Compile Include="Models\ProxyInfo.cs" />
     <Compile Include="Handlers\NetworkHandler.cs" />
     <Compile Include="Integrations\GitIntegration.cs" />
     <Compile Include="Integrations\IIntegration.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Components\NotifyIcon.Designer.cs">
       <DependentUpon>NotifyIcon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Services\ResourceService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -106,13 +108,11 @@
     <EmbeddedResource Include="Components\NotifyIcon.resx">
       <DependentUpon>NotifyIcon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="config.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

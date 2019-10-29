@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using AutoProxy.Services;
-using AutoProxy.Config;
+using AutoProxy.Settings;
 using AutoProxy.Integrations;
 
 namespace AutoProxy
@@ -11,7 +11,7 @@ namespace AutoProxy
         {
             var ssid = NetworkService.GetConnectingSSID();
             if (ssid == string.Empty) return;
-            var settings = Configuration.Instance.FindSetting(ssid);
+            var settings = AutoProxyConfig.Current.Proxy.FindSetting(ssid);
             if (settings.Count != 0)
             {
                 var setting = settings.First();

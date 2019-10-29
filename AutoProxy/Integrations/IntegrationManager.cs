@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoProxy.Config;
+using AutoProxy.Models;
 
 namespace AutoProxy.Integrations
 {
@@ -35,7 +35,7 @@ namespace AutoProxy.Integrations
             _integrations.Remove(integration);
         }
 
-        public void SetProxy(ProxySetting setting)
+        public void SetProxy(ProxyInfo setting)
         {
             _integrations.ForEach(i => i.SetProxy(setting));
         }

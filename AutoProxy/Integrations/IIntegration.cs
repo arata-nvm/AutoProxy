@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AutoProxy.Config;
+using AutoProxy.Models;
 
 namespace AutoProxy.Integrations
 {
     interface IIntegration
     {
 
-        void SetProxy(ProxySetting setting);
+        void SetProxy(ProxyInfo setting);
 
         void UnsetProxy();
 

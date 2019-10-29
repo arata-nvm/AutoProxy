@@ -1,5 +1,5 @@
 ﻿using Microsoft.Win32;
-using AutoProxy.Config;
+using AutoProxy.Models;
 
 namespace AutoProxy.Services
 {
@@ -8,7 +8,7 @@ namespace AutoProxy.Services
 
         private static string InternetSettingsKeyName = @"Software\Microsoft\Windows\CurrentVersion\Internet Settings";
 
-        public static bool SetProxy(ProxySetting setting)
+        public static bool SetProxy(ProxyInfo setting)
         {
             var registry = Registry.CurrentUser.OpenSubKey(InternetSettingsKeyName, true);
             if (registry == null)

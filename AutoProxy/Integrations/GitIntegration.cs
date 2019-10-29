@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using AutoProxy.Config;
 using AutoProxy.Services;
+using AutoProxy.Models;
 
 namespace AutoProxy.Integrations
 {
     class GitIntegration : IIntegration
     {
     
-        public void SetProxy(ProxySetting setting)
+        public void SetProxy(ProxyInfo setting)
         {
             CommandService.RunCommand($"git config --global http.proxy {setting.ProxyServer}");
             CommandService.RunCommand($"git config --global https.proxy {setting.ProxyServer}");
